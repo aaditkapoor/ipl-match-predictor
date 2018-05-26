@@ -1,0 +1,88 @@
+
+<html>
+<head>
+	<title>IPL Match Predictor</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="/home/">Home</a></li>
+            <li role="presentation"><a href="/leaderboards/">Leaderboard</a></li>
+            <li role="presentation"><a href="/about/">About</a></li>
+          </ul>
+        </nav>
+        <b><h3 class="text-muted">IPL Match Predictor</h3></b>
+      </div>
+      
+
+      <div class="jumbotron">
+       <h1>Welcome!</h1>
+       <b>
+               <p class="lead">The Ultimate betting begins! Bet with the computer on which team will win the match.</p><br>
+        <hr>
+        <p>You will be presented with two teams and a bunch of questions to predict which team will win the match.<br>
+          Your prediction will be matched with the computer's prediction if your predictions matches with the computer you <b>WIN!</b><br>
+          <b><u>Note: </u></b> <i> We are using data from IPL 2017 to predict the winner of a particular match. </i>
+          <hr>
+
+
+
+           <h4> Match against {{ team1 }} and {{ team2 }}</h4><br>
+          <p>
+            <h2> {{team1}} VS {{team2}}</h2>
+            <hr>
+
+        <form action="/request_and_predict/" method="get">
+        <div class="form-group">
+
+          
+
+          <label for="usr">Which team will win the toss? (Team 1 or Team 2)</label><br>
+          <div class="form-group">
+  <label for="sel1">Select Team:</label>
+  <select class="form-control" name="toss_decision" id="toss_decision_acc_to_human">
+    <option> {{ team1 }}</option>
+    <option>{{ team2 }}</option>
+  </select>
+</div>
+<input type="hidden" name="team1" value = "{{team1}}">
+<input type="hidden" name="team2" value="{{team2}}">
+<hr>
+  <label for="usr">Which Team will win according to your intuition? (Team 1 or Team 2)</label>
+ <div class="form-group">
+  <label for="sel1">Select Team:</label>
+  <select class="form-control" name="winning_team" id="winning_acc_to_human">
+    <option> {{ team1 }}</option>
+    <option>{{ team2 }}</option>
+  </select>
+</div> <button type="submit"  class="btn btn-lg btn-success">Submit Prediciton</button> 
+
+
+                
+      </form>
+  <button type="submit"  class="btn btn-lg btn-success" formaction="/leaderboards/">Leaderboard</button>
+
+     <hr>
+      <footer class="footer">
+        <b><p>&copy; 2018 Aadit Kapoor.</p><b>
+      </footer>
+
+    </div> <!-- /container -->
+
+</body>
+</html>

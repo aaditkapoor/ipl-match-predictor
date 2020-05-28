@@ -22,6 +22,7 @@ Contact me at: aaditkapoor2000@gmail.com
 
 # LICENSE
 
+I have seen a lot of people just taking the model files and using it in the app without any citations.
 
 Copyright 2020 Aadit Kapoor
 

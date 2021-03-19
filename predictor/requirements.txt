@@ -24,7 +24,7 @@ html5lib==0.9999999
 idna==2.5
 imageio==2.3.0
 jedi==0.11.1
-Jinja2==2.9.6
+Jinja2==2.11.3
 jinja2-time==0.2.0
 joblib==0.11
 jsonschema==2.6.0
